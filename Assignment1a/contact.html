@@ -1,0 +1,484 @@
+<!-- ==========================
+PAGE 4: contact.html
+Contact Us - Pune Tourist Guide
+========================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Pune Tourist Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Main Content */
+    .contact-header {
+      text-align: center;
+      color: black;
+      margin: 50px 20px;
+      padding: 40px 20px;
+    }
+    
+    .contact-header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .contact-header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    
+    .contact-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 50px;
+    }
+    
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    
+    .contact-info {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .contact-info h2 {
+      color: black;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: black;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    
+    .info-content h3 {
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .info-content p {
+      color: #666;
+      margin: 0;
+      line-height: 1.6;
+    }
+    
+    .info-content a {
+      color: #667eea;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .info-content a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .contact-form h2 {
+      color: black;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: black;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .submit-btn {
+      background: black ;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+    
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+    
+    .error-message {
+      display: none;
+      color: #dc3545;
+      font-size: 0.85rem;
+      margin-top: 5px;
+    }
+    
+    .form-group.error input,
+    .form-group.error textarea {
+      border-color: #dc3545;
+      background-color: #fff5f5;
+    }
+    
+    .form-group.error .error-message {
+      display: block;
+    }
+    
+    .success-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .success-message.show {
+      display: block;
+    }
+      .contact-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark opacity-24">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Explore Pune</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
+        <li class="nav-item"><a class="nav-link" href="food.html">Food</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="contact-header">
+  <h1>Get In Touch With Us</h1>
+  <p>Have questions about exploring Pune? We're here to help!</p>
+</div>
+
+<div class="contact-container">
+  <div class="contact-content">
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="info-content">
+          <h3>Address</h3>
+          <p>123 Tourist Center Road<br>Pune, Maharashtra 411001<br>India</p>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="info-content">
+          <h3>Phone</h3>
+          <p>+91 (020) 2556-8000<br>+91 9876 543 210</p>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="info-content">
+          <h3>Email</h3>
+          <p>info@punetouristguide.com<br>support@punetouristguide.com</p>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="info-content">
+          <h3>Working Hours</h3>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="info-content">
+          <h3>Follow Us</h3>
+          <p>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+      <h2>Send us a Message</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          <small class="error-message" id="nameError"></small>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <small class="error-message" id="emailError"></small>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+          <small class="error-message" id="phoneError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="Gender">Gender</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+          <small class="error-message" id="subjectError"></small>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Please share your query, feedback, or suggestions..." required></textarea>
+          <small class="error-message" id="messageError"></small>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center p-3">
+  © 2026 Pune Tourist Guide
+</footer>
+
+<script>
+  // Form validation script
+  const contactForm = document.getElementById('contactForm');
+  
+  // Validation rules
+  const validators = {
+    name: {
+      validate: (value) => {
+        if (!value.trim()) return 'Full name is required';
+        if (value.trim().length < 3) return 'Full name must be at least 3 characters long';
+        if (!/^[a-zA-Z\s]*$/.test(value)) return 'Full name can only contain letters and spaces';
+        return '';
+      }
+    },
+    email: {
+      validate: (value) => {
+        if (!value.trim()) return 'Email address is required';
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) return 'Please enter a valid email address';
+        return '';
+      }
+    },
+    phone: {
+      validate: (value) => {
+        if (value.trim() === '') return ''; 
+        const phoneRegex = /^[0-9\s\-\+\(\)]*$/;
+        if (!phoneRegex.test(value)) return 'Please enter a valid phone number';
+        if (value.replace(/\D/g, '').length < 10) return 'Phone number must contain at least 10 digits';
+        return '';
+      }
+    },
+    subject: {
+      validate: (value) => {
+        if (!value.trim()) return 'Subject is required';
+        if (value.trim().length < 3) return 'Subject must be at least 3 characters long';
+        return '';
+      }
+    },
+    message: {
+      validate: (value) => {
+        if (!value.trim()) return 'Message is required';
+        if (value.trim().length < 10) return 'Message must be at least 10 characters long';
+        return '';
+      }
+    }
+  };
+  
+  // Clear error for a field
+  function clearError(fieldName) {
+    const field = document.getElementById(fieldName);
+    const errorElement = document.getElementById(fieldName + 'Error');
+    field.parentElement.classList.remove('error');
+    errorElement.textContent = '';
+  }
+  
+  // Show error for a field
+  function showError(fieldName, message) {
+    const field = document.getElementById(fieldName);
+    const errorElement = document.getElementById(fieldName + 'Error');
+    field.parentElement.classList.add('error');
+    errorElement.textContent = message;
+  }
+  
+  // Validate a single field
+  function validateField(fieldName) {
+    const field = document.getElementById(fieldName);
+    const value = field.value;
+    const validator = validators[fieldName];
+    
+    if (validator) {
+      const error = validator.validate(value);
+      if (error) {
+        showError(fieldName, error);
+        return false;
+      } else {
+        clearError(fieldName);
+        return true;
+      }
+    }
+    return true;
+  }
+  
+  // Validate entire form
+  function validateForm() {
+    let isValid = true;
+    for (const fieldName in validators) {
+      if (!validateField(fieldName)) {
+        isValid = false;
+      }
+    }
+    return isValid;
+  }
+  
+  // Real-time validation on input
+  document.getElementById('name').addEventListener('blur', () => validateField('name'));
+  document.getElementById('email').addEventListener('blur', () => validateField('email'));
+  document.getElementById('phone').addEventListener('blur', () => validateField('phone'));
+  document.getElementById('subject').addEventListener('blur', () => validateField('subject'));
+  document.getElementById('message').addEventListener('blur', () => validateField('message'));
+  
+  // Form submission
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    if (validateForm()) {
+      // Show success message
+      const successMsg = document.createElement('div');
+      successMsg.className = 'success-message show';
+      successMsg.textContent = 'Thank you! Your message has been sent successfully.';
+      contactForm.parentElement.insertBefore(successMsg, contactForm);
+      
+      // Reset form
+      contactForm.reset();
+      
+      // Remove success message after 5 seconds
+      setTimeout(() => {
+        successMsg.remove();
+      }, 5000);
+      
+      console.log('Form submitted successfully');
+    }
+  });
+</script>
+
+</body>
+</html>

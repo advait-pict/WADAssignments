@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>Register</title> 
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" 
+/> 
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+<script> 
+$(document).on("mobileinit", function () { 
+$.mobile.ajaxEnabled = false; 
+}); 
+</script> 
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+</head> 
+<body> 
+<div data-role="page" style="background-color:aliceblue;"> 
+<div data-role="header" data-theme="b"> 
+<h1>My Website</h1> 
+</div> 
+<div data-role="navbar"> 
+<ul> 
+<li><a href="index.html" rel="external">Home</a></li> 
+<li><a href="about.html" rel="external">About</a></li> 
+<li><a href="register.html" rel="external" class="ui-btn-active">Register</a></li> 
+</ul> 
+</div> 
+<div role="main" class="ui-content" style="max-width:400px; margin:auto;"> 
+<h3>Register</h3> 
+<form> 
+<label for="username">Username</label> 
+<input type="text" id="username"> 
+<label for="email">Email</label> 
+<input type="email" id="email"> 
+<label for="password">Password</label> 
+<input type="password" id="password"> 
+<input type="submit" value="Register"> 
+</form> 
+</div> 
+</div> 
+</body> 
+</html> 

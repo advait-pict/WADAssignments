@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>My Website</title> 
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" 
+/> 
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+<script> 
+$(document).on("mobileinit", function () { 
+$.mobile.ajaxEnabled = false; 
+}); 
+</script> 
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<style> 
+/* CENTER + RESPONSIVE GRID */ 
+.gallery { 
+display: flex; 
+flex-wrap: wrap; 
+justify-content: center;   /* THIS CENTERS */ 
+gap: 10px; 
+} 
+.gallery img { 
+width: 200px; 
+height: 150px; 
+border-radius: 10px; 
+} 
+</style> 
+</head> 
+<body> 
+<div data-role="page" style="background-color:aliceblue;"> 
+<!-- Header --> 
+<div data-role="header" data-theme="b"> 
+<h1>My Website</h1> 
+</div> 
+<!-- Navbar --> 
+<div data-role="navbar"> 
+<ul> 
+<li><a href="index.html" rel="external" class="ui-btn-active">Home</a></li> 
+<li><a href="about.html" rel="external">About</a></li> 
+<li><a href="register.html" rel="external">Register</a></li> 
+</ul> 
+</div> 
+<!-- Content --> 
+<div role="main" class="ui-content"> 
+<center><h3>Gallery</h3></center> 
+<div class="gallery"> 
+<img src="https://picsum.photos/200?1"> 
+<img src="https://picsum.photos/200?2"> 
+<img src="https://picsum.photos/200?3"> 
+<img src="https://picsum.photos/200?4"> 
+<img src="https://picsum.photos/200?5"> 
+<img src="https://picsum.photos/200?6"> 
+<img src="https://picsum.photos/200?7"> 
+<img src="https://picsum.photos/200?8"> 
+</div> 
+</div> 
+<!-- Footer --> 
+<div data-role="footer"> 
+<center> 
+<a href="index.html" rel="external" class="ui-btn ui-btn-inline">Home</a> 
+<a href="about.html" rel="external" class="ui-btn ui-btn-inline">About</a> 
+<a href="register.html" rel="external" class="ui-btn ui-btn-inline">Register</a> 
+</center> 
+</div> 
+</div> 
+</body> 
+</html>
